@@ -25,7 +25,7 @@ public class Lesson1_2 {
         /*
         System.out.println("Task 3");
         System.out.println("Введите a");
-        int a = sc.nextInt();
+        int a = sc.nextInt();1111
         if (a%3==0) {
             System.out.println("Число a делится на 3 без остатка");
         } else {
