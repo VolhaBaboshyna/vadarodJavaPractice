@@ -1,4 +1,4 @@
-package by.lessons.practices.class2;
+package by.lessons.practices.class3;
 
 public class Book {
     int id;
