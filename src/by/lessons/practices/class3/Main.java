@@ -22,6 +22,7 @@ public class Main {
         for (Book value : books) {
             String book2Name = value.info();
             System.out.println(book2Name);
+
         }
 
     }
