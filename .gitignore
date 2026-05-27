@@ -4,6 +4,8 @@ out/
 .gigaide
 !**/src/main/**/out/
 !**/src/test/**/out/
+.gigaide
+.idea
 
 
 ### Eclipse ###
