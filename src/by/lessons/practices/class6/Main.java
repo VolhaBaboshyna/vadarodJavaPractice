@@ -16,6 +16,7 @@ public class Main {
         System.out.println(list);
 
         boolean isKonfeta = list.contains("Конфета");
+        System.out.println(isKonfeta);
 
         int kolichestvo = list.size();
 
