@@ -36,11 +36,16 @@ public class Farm implements Externalizable {
     }
 
     @Override
-    public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+    public void writeExternal(ObjectOutput out) throws IOException {
+        out.writeObject(animal);
+        out.writeObject(name);
     }
 
     @Override
-    public void writeExternal(ObjectOutput out) throws IOException {
+    public void readExternal(ObjectInput in)
+            throws IOException, ClassNotFoundException {
+        animal = (String) in.readObject();
+        name = (String) in.readObject();
     }
 
     public static void serialize(List<Farm> farms, File file) {
@@ -51,9 +56,9 @@ public class Farm implements Externalizable {
         }
     }
 
-    public static List <Farm> deserialize(String file) {
+    public static List<Farm> deserialize(String file) {
         try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(file))) {
-            List <Farm> farmResult = (List<Farm>) objectInputStream.readObject();
+            List<Farm> farmResult = (List<Farm>) objectInputStream.readObject();
             return farmResult;
         } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException("Error"); // лучше пробрасывать оригинальное исключение
