@@ -1,4 +1,4 @@
-package by.lessons.practices.class8.class9;
+package by.lessons.practices.class9;
 
 public class Avto {
     private int id;
